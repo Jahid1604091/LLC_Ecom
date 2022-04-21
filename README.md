@@ -15,7 +15,9 @@ This is an open source Ecommerce Platform
 ## Installation
 - clone the repo
 - Run `composer install`
+- Run `cp .env.example .env`
 - Run `php artisan migrate --seed`
+
 
 ### Contribution
 - fork the repo
