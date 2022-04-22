@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('slug',128)->unique();
             $table->unsignedInteger('category_id')->default(0);
             $table->timestamps();
+            $table->foreignId('category-id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
