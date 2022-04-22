@@ -18,9 +18,8 @@ return new class extends Migration
             $table->string('name',128)->unique();
             $table->string('banner',128);
             $table->string('slug',128)->unique();
-            $table->unsignedInteger('category_id')->default(0);
             $table->timestamps();
-            $table->foreignId('category-id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade')->default(0);
         });
     }
 
