@@ -10,7 +10,7 @@ class Order extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function customers(){
+    public function customer(){
         return $this->belongsTo(User::class);
     }
 
